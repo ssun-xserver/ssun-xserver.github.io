@@ -1,207 +1,162 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SSun & Xserver — Ваши сервера</title>
+  <meta charset="UTF-8">
+  <title>SSun & Xserver - Ваши сервера</title>
   <style>
     body {
-      background-color: #ffffff;
-      color: #000000;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 20px;
-      text-align: center;
+      background-color: white;
+      color: black;
+      font-family: "Courier New", Courier, monospace;
+      margin: 20px;
+      font-size: 14px;
     }
 
-    .container {
-      max-width: 700px;
-      margin: 0 auto;
+    h1, h2 {
+      font-weight: bold;
+      margin: 16px 0;
+      color: #000080; /* тёмно-синий */
     }
 
     h1 {
-      color: #1E88E5; /* синий */
-      margin: 25px 0;
-      font-weight: 700;
-      font-size: 28px;
+      text-align: center;
+      border-bottom: 2px solid #000080;
+      padding-bottom: 4px;
     }
 
-    .logo-placeholder {
-      width: 120px;
-      height: 120px;
-      background-color: #f0f0f0;
-      margin: 20px auto;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      color: #666;
-      border: 1px dashed #ccc;
-    }
-
-    .section {
-      margin: 30px 0;
-      padding: 20px;
-      background-color: #f9f9f9;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-
-    .btn {
-      display: inline-block;
-      background-color: #FB8C00; /* оранжевый */
-      color: white;
-      padding: 12px 24px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background-color 0.2s;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    .btn:hover {
-      background-color: #F57C00;
-    }
-
-    .input-group {
+    hr {
+      border: 0;
+      height: 1px;
+      background-color: #aaa;
       margin: 20px 0;
     }
 
+    a {
+      color: #0000EE;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #FF0000;
+    }
+
+    .btn {
+      background-color: #FF8C00; /* оранжевый */
+      color: white;
+      border: 2px outset #D2691E;
+      padding: 6px 12px;
+      font-weight: bold;
+      font-family: "Courier New", monospace;
+      cursor: pointer;
+    }
+
+    .btn:active {
+      border-style: inset;
+    }
+
     input[type="text"] {
-      padding: 10px 16px;
-      font-size: 16px;
-      width: 280px;
-      border: 2px solid #1E88E5;
-      border-radius: 6px;
-      text-align: center;
-      outline: none;
-    }
-
-    input[type="text"]:focus {
-      border-color: #FB8C00;
-    }
-
-    .loading, .result {
-      margin-top: 16px;
-      font-weight: 600;
-      min-height: 24px;
+      border: 2px inset #ccc;
+      padding: 3px;
+      font-family: "Courier New", monospace;
+      font-size: 14px;
+      width: 160px;
     }
 
     .loading {
-      color: #1E88E5;
+      color: #000080;
+      display: none;
+      margin-top: 10px;
     }
 
     .result {
-      color: #00695C;
-      background-color: #E0F7FA;
-      padding: 12px;
-      border-radius: 6px;
+      background-color: #f0f0f0;
+      border: 1px solid #999;
+      padding: 8px;
+      margin-top: 10px;
+      font-weight: bold;
       display: none;
-      word-break: break-all;
     }
-
-    footer {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #666;
-    }
-
-    /* Анимация "мигания" точек */
-    @keyframes blink {
-      0%, 100% { opacity: 0.2; }
-      50% { opacity: 1; }
-    }
-    .dot { animation: blink 1.4s infinite; }
-    .dot:nth-child(2) { animation-delay: 0.2s; }
-    .dot:nth-child(3) { animation-delay: 0.4s; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>SSun & Xserver — Ваши сервера</h1>
 
-    <div class="logo-placeholder">
-      [Логотип SSun & Xserver]<br>
-      (место для изображения)
-    </div>
+<h1>SSun & Xserver - Ваши сервера</h1>
 
-    <div class="section">
-      <h2>Скачать Xserver</h2>
-      <p>Версия: 1.0 | Размер: 6.28 МБ | Загружено: 13.11.2025</p>
-      <a href="https://www.mediafire.com/file/i0y79gg9s47mv9v/xserver.apk/file" target="_blank" class="btn">
-        Перейти на сайт скачивания
-      </a>
-    </div>
+<hr>
 
-    <div class="section">
-      <h2>Получить пароль</h2>
-      <div class="input-group">
-        <input type="text" id="keyInput" placeholder="Введите ключ активации" maxlength="6" autocomplete="off">
-      </div>
-      <button class="btn" onclick="checkKey()">Проверить ключ</button>
+<h2>Скачать Xserver</h2>
+<p>
+  <b>Файл:</b> xserver.apk<br>
+  <b>Размер:</b> 6.28 МБ<br>
+  <b>Загружен:</b> 13 ноября 2025 г., 11:36 (из Российской Федерации)<br><br>
+  <a href="https://www.mediafire.com/file/i0y79gg9s47mv9v/xserver.apk/file" target="_blank">
+    <button class="btn">Перейти на сайт скачивания</button>
+  </a>
+</p>
 
-      <div id="loading" class="loading" style="display: none;">
-        Обработка<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>
-      </div>
+<hr>
 
-      <div id="result" class="result"></div>
-    </div>
+<h2>Получить пароль</h2>
+<p>
+  Введите ключ активации:<br><br>
+  <input type="text" id="keyInput" maxlength="6" autocomplete="off">
+  <br><br>
+  <button class="btn" onclick="checkKey()">Проверить ключ</button>
+</p>
 
-    <footer>
-      &copy; 2025 SSun & Xserver. Все права защищены.
-    </footer>
-  </div>
+<div id="loading" class="loading">Обработка...</div>
+<div id="result" class="result"></div>
 
-  <script>
-    const validKeys = [
-      "wnUIFW", "nQTTvu", "RsvVSW", "cp4B6J", "mzYsm3",
-      "pFk6Rh", "oXXNsN", "HOOWTx", "x6xkEZ", "8xj36K"
-    ];
+<hr>
 
-    const ssunCodes = [
-      "681335753988", "684030306335", "061330418227",
-      "345584332552", "824389916797", "879277717059",
-      "558510707223", "239324307220", "016245839568",
-      "203827325749"
-    ];
+<p align="center">
+  &copy; 2025 SSun & Xserver. Все права защищены.
+</p>
 
-    function checkKey() {
-      const input = document.getElementById("keyInput");
-      const key = input.value.trim().toUpperCase();
-      const loading = document.getElementById("loading");
-      const resultEl = document.getElementById("result");
+<script>
+  const validKeys = [
+    "wnUIFW", "nQTTvu", "RsvVSW", "cp4B6J", "mzYsm3",
+    "pFk6Rh", "oXXNsN", "HOOWTx", "x6xkEZ", "8xj36K"
+  ];
 
-      // Сброс
-      resultEl.style.display = "none";
-      resultEl.textContent = "";
+  const ssunCodes = [
+    "681335753988", "684030306335", "061330418227",
+    "345584332552", "824389916797", "879277717059",
+    "558510707223", "239324307220", "016245839568",
+    "203827325749"
+  ];
 
-      if (!validKeys.includes(key)) {
-        alert("Неверный ключ. Проверьте ввод и повторите попытку.");
-        input.focus();
-        return;
-      }
+  function checkKey() {
+    const input = document.getElementById("keyInput");
+    const key = input.value.trim().toUpperCase();
+    const loading = document.getElementById("loading");
+    const resultEl = document.getElementById("result");
 
-      // Показать анимацию загрузки
-      loading.style.display = "inline-block";
+    resultEl.style.display = "none";
+    resultEl.textContent = "";
 
-      // Имитация задержки: 2–5 секунд
-      const delay = 2000 + Math.floor(Math.random() * 3000);
-      setTimeout(() => {
-        loading.style.display = "none";
-        const code = ssunCodes[Math.floor(Math.random() * ssunCodes.length)];
-        resultEl.textContent = `Ваш SSun-код: ${code}`;
-        resultEl.style.display = "block";
-        input.value = "";
-      }, delay);
+    if (!validKeys.includes(key)) {
+      alert("Неверный ключ. Проверьте ввод и повторите попытку.");
+      input.focus();
+      return;
     }
 
-    // Enter → проверка
-    document.getElementById("keyInput").addEventListener("keypress", (e) => {
-      if (e.key === "Enter") checkKey();
-    });
-  </script>
+    loading.style.display = "block";
+
+    // Имитация 2–5 секунд загрузки
+    setTimeout(() => {
+      loading.style.display = "none";
+      const code = ssunCodes[Math.floor(Math.random() * ssunCodes.length)];
+      resultEl.textContent = "Ваш SSun-код: " + code;
+      resultEl.style.display = "block";
+      input.value = "";
+    }, 2000 + Math.floor(Math.random() * 3000));
+  }
+
+  document.getElementById("keyInput").addEventListener("keypress", e => {
+    if (e.key === "Enter") checkKey();
+  });
+</script>
+
 </body>
 </html>
