@@ -15,7 +15,7 @@
     h1, h2 {
       font-weight: bold;
       margin: 16px 0;
-      color: #000080; /* тёмно-синий */
+      color: #000080;
     }
 
     h1 {
@@ -41,7 +41,7 @@
     }
 
     .btn {
-      background-color: #FF8C00; /* оранжевый */
+      background-color: #FF8C00;
       color: white;
       border: 2px outset #D2691E;
       padding: 6px 12px;
@@ -81,6 +81,15 @@
 <body>
 
 <h1>SSun & Xserver - Ваши сервера</h1>
+
+<hr>
+
+<h2>Telegram Bot</h2>
+<p>
+  <a href="https://t.me/screen_test_app" target="_blank">
+    <button class="btn">Telegram Bot</button>
+  </a>
+</p>
 
 <hr>
 
@@ -143,7 +152,6 @@
 
     loading.style.display = "block";
 
-    // Имитация 2–5 секунд загрузки
     setTimeout(() => {
       loading.style.display = "none";
       const code = ssunCodes[Math.floor(Math.random() * ssunCodes.length)];
